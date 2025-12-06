@@ -181,6 +181,9 @@ def smart_categorize_files(files_content, api_key, model_provider="groq"):
     Universally categorize files by analyzing their CONTENT.
     Handles any combination: 1 file (all), 2 files (split), 3 files (separate).
     Uses heuristics first to save API calls, only uses AI if uncertain.
+    
+    IMPORTANT: For content detection, we ALWAYS use Groq (if API key available),
+    regardless of which model is used for grading. This ensures consistent detection.
     """
     print(f"\n🔍 STARTING INTELLIGENT FILE ANALYSIS...")
     print(f"📊 Received {len(files_content)} file(s) to analyze:")
@@ -210,17 +213,21 @@ def smart_categorize_files(files_content, api_key, model_provider="groq"):
         print(f"   🔍 Heuristic detection: {', '.join(heuristic_types).upper()} (confidence: {confidence}%)")
         
         # 2. Only use AI if heuristics are uncertain (< 70% confidence)
-        if confidence < 70:
+        if confidence < 70 and api_key:
             print(f"   🤖 Low confidence, using AI for verification...")
             try:
-                detected_types = analyze_content_type(content, api_key, model_provider)
+                # ALWAYS use Groq for content detection (most reliable)
+                # Even if grading model is LoRA/finetuned
+                detection_provider = "groq" if api_key else model_provider
+                detected_types = analyze_content_type(content, api_key, detection_provider)
                 print(f"   ✅ AI detection: {', '.join(detected_types).upper()}")
             except Exception as e:
                 print(f"   ⚠️ AI analysis failed ({e}), using heuristics")
                 detected_types = heuristic_types
         else:
             detected_types = heuristic_types
-            print(f"   ✅ Using heuristic result (high confidence)")
+            reason = "high confidence" if confidence >= 70 else "no API key"
+            print(f"   ✅ Using heuristic result ({reason})")
         
         file_classifications[filename] = detected_types
         
