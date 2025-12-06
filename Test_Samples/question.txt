@@ -1,0 +1,7 @@
+Task: Write a Python function named 'calculate_stats' that takes a list of numbers as input.
+
+Requirements:
+1. The function should return a dictionary with keys: 'mean', 'median', and 'std_dev'.
+2. You must not use any external libraries like numpy or pandas; implement the logic using standard Python.
+3. Handle the case where the input list is empty by returning None.
+4. The results should be rounded to 2 decimal places.

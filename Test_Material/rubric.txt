@@ -1,0 +1,34 @@
+GRADING RUBRIC
+Programming Assignment #1 - Factorial Function
+
+Total Points: 10
+
+CRITERIA:
+
+1. Correctness (5 points)
+   - Function returns correct factorial values for all inputs
+   - Mathematical accuracy verified
+   - 5 points: All test cases pass correctly
+   - 3 points: Most test cases pass with minor errors
+   - 1 point: Function runs but produces incorrect results
+   - 0 points: Function does not work
+
+2. Edge Cases (3 points)
+   - Proper handling of n=0 (should return 1)
+   - Proper handling of n=1 (should return 1)
+   - 3 points: Both edge cases handled correctly
+   - 2 points: One edge case handled correctly
+   - 0 points: Edge cases not handled
+
+3. Recursion (2 points)
+   - Implementation uses recursive approach
+   - 2 points: Correct recursive implementation
+   - 1 point: Attempted recursion with errors
+   - 0 points: No recursion used
+
+GRADING SCALE:
+10 points: Excellent - All requirements met
+8-9 points: Good - Minor issues
+6-7 points: Satisfactory - Some problems
+4-5 points: Needs improvement
+0-3 points: Unsatisfactory

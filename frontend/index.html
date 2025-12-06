@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoGrade+ | AI Grading Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">
+                    <span class="logo-icon">🤖</span>
+                    AutoGrade+
+                </h1>
+            </div>
+
+            <div class="sidebar-content">
+                <button class="new-chat-btn" id="newChatBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    New Grading Session
+                </button>
+
+                <div class="chat-history">
+                    <h3 class="history-title">Recent Sessions</h3>
+                    <div class="history-list" id="historyList">
+                        <!-- Chat history items will be added here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="settings-panel">
+                    <h4>Settings</h4>
+                    <div class="setting-item">
+                        <label for="modelProvider">Model Provider</label>
+                        <select id="modelProvider">
+                            <option value="groq">Groq (ReAct Agent)</option>
+                            <option value="ollama">Ollama (Local)</option>
+                            <option value="finetuned">Fine-Tuned Expert</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <div class="chat-header">
+                <h2 class="chat-title">AI Grading Assistant</h2>
+                <p class="chat-subtitle">Upload questions, rubrics, and student answers for automated grading</p>
+            </div>
+
+            <div class="chat-container" id="chatContainer">
+                <div class="welcome-screen" id="welcomeScreen">
+                    <div class="welcome-content">
+                        <div class="welcome-icon">🎓</div>
+                        <h2>Welcome to AutoGrade+</h2>
+                        <p>Upload your files or start typing to begin grading</p>
+
+                        <div class="feature-cards">
+                            <div class="feature-card">
+                                <div class="feature-icon">📄</div>
+                                <h3>Upload Files</h3>
+                                <p>PDF, TXT, CSV, PY supported</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📝</div>
+                                <h3>Auto Extract</h3>
+                                <p>Questions & rubrics detected</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">⚡</div>
+                                <h3>Instant Grading</h3>
+                                <p>AI-powered feedback</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="messages" id="messages">
+                    <!-- Messages will be added here -->
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-container">
+                    <button class="attach-btn" id="attachBtn" title="Upload files">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+
+                    <input type="file" id="fileInput" multiple accept=".pdf,.txt,.csv,.py,.md,.json"
+                        style="display: none;">
+
+                    <textarea id="messageInput"
+                        placeholder="Type your message or upload files (questions, rubrics, student answers)..."
+                        rows="1"></textarea>
+
+                    <button class="send-btn" id="sendBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="uploaded-files" id="uploadedFiles">
+                    <!-- Uploaded file chips will appear here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+Programming Assignment #1
+Factorial Function Implementation
+
+TASK:
+Write a Python function called `factorial` that calculates the factorial of a given number n.
+
+REQUIREMENTS:
+- The function should take one parameter: n (a non-negative integer)
+- The function must use recursion to calculate the factorial
+- Handle edge cases: n=0 and n=1 should both return 1
+- Include proper documentation (docstring)
+- Provide test cases to demonstrate your function works correctly
+
+EXAMPLE:
+factorial(5) should return 120
+factorial(0) should return 1
+factorial(1) should return 1
+
+SUBMISSION:
+Submit your Python code with your student ID included in the file.

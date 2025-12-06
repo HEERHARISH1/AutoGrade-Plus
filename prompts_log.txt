@@ -1,0 +1,18 @@
+=== PROMPT LOG FOR GENAI FINAL PROJECT ===
+Student: Heer (i222371)
+Project: AutoGrade+ (ReAct vs. Fine-Tuning)
+
+=== CATEGORY 1: PROJECT PLANNING & ARCHITECTURE ===
+[2025-11-26] [Model: Gemini/Claude]
+Prompt: "Create a comprehensive implementation plan for a comparative analysis project between ReAct Agents and LoRA Fine-Tuning for automated grading..."
+Result: Generated detailed roadmap, folder structure, and tech stack recommendation.
+
+=== CATEGORY 2: CODE IMPLEMENTATION (AGENT) ===
+
+=== CATEGORY 3: CODE IMPLEMENTATION (FINE-TUNING) ===
+
+=== CATEGORY 4: DEBUGGING & OPTIMIZATION ===
+
+=== CATEGORY 5: RESEARCH PAPER WRITING ===
+
+=== CATEGORY 6: EVALUATION & ANALYSIS ===

@@ -1,0 +1,11 @@
+Extract the grading criteria from the following text.
+
+RUBRIC TEXT:
+{rubric_text}
+
+Output ONLY a simple list of criteria in this format:
+- [Criterion Name]: [Max Points] points. [Description]
+
+Example:
+- Grammar: 10 points. Check for spelling and syntax.
+- Logic: 20 points. Assess the validity of arguments.

@@ -1,0 +1,18 @@
+Grading Rubric for Statistics Function (Total: 10 points)
+
+1. Function Definition (2 points)
+   - Correct function name 'calculate_stats' used: 1 point
+   - Accepts a single list argument: 1 point
+
+2. Logic Implementation (4 points)
+   - Correct calculation of Mean: 1 point
+   - Correct calculation of Median (handling both odd and even lengths): 2 points
+   - Correct calculation of Standard Deviation: 1 point
+
+3. Constraints & Edge Cases (2 points)
+   - No external libraries used (numpy/pandas): 1 point
+   - Returns None for empty input list: 1 point
+
+4. Output Format (2 points)
+   - Returns a dictionary with correct keys: 1 point
+   - Values rounded to 2 decimal places: 1 point

@@ -1,0 +1,28 @@
+Student ID: i222371
+
+Programming Assignment #1 - Factorial Function
+
+def factorial(n):
+    """
+    Calculate factorial of n using recursion.
+    
+    Args:
+        n: Non-negative integer
+        
+    Returns:
+        Factorial of n
+    """
+    # Handle edge cases
+    if n == 0 or n == 1:
+        return 1
+    
+    # Recursive case
+    return n * factorial(n - 1)
+
+
+# Test cases to demonstrate correctness
+print("Testing factorial function:")
+print(f"factorial(0) = {factorial(0)}")  # Expected: 1
+print(f"factorial(1) = {factorial(1)}")  # Expected: 1
+print(f"factorial(5) = {factorial(5)}")  # Expected: 120
+print(f"factorial(10) = {factorial(10)}")  # Expected: 3628800

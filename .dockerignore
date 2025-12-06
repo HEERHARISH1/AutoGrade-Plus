@@ -1,0 +1,78 @@
+# Docker ignore file for AutoGrade+
+# Exclude unnecessary files from Docker image
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment
+.env
+.env.local
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+debug_log.txt
+extraction_log.txt
+grading_test_output.txt
+test_results.txt
+
+# Test files
+Test_Material/
+Test_Samples/
+tests/
+
+# Documentation
+*.md
+!README.md
+paper/
+notebooks/
+
+# Git
+.git/
+.gitignore
+
+# Large model files (should be mounted as volume)
+lora_model/
+*.bin
+*.safetensors
+
+# Temporary files
+*.tmp
+*.temp
+reproduce_issue.py
+quick_test.py
+test_*.py
+create_test_pdfs.py
